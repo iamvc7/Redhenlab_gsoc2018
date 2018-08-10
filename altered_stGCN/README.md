@@ -1,4 +1,13 @@
+### Installation
+* cd torchlight; python setup.py install; cd ..
+* pip install moviepy
+* sudo apt-get install ffmpeg
+* openpose
+* pytorch
+* Other dependencies, pip install -r requirements.txt
 
+
+### Data Preperation
 #### Place the [dataset](https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/human-activity-recognition/mpii-cooking-activities-dataset/) and labels inside folder named, *Cooking_Activity*
 
 > To resize the videos data into required format
@@ -40,25 +49,25 @@ $ cd ../
 $ bash gendata.sh
 ```
 
-> Training
+### Training
 ```sh
 $ python main.py recognition -c config/st_gcn/kinetics-skeleton/train.yaml --device 0 --batch_size 1
 Note : parameters can be changed in train.yaml. Other parameters are --base_lr (val) --optimizer (eg. Adam). For using pretrained weights, --weights (path to weights) --ignore_weights (list of layers to ignore)
 ```
 
 
-> Testing
+### Testing
 ```sh
 $ python main.py recognition -c config/st_gcn/kinetics-skeleton/test.yaml --device 0 --batch_size 1 
 Note : parameters can be changed in test.yaml
 ```
-> Visualization
+### Visualization
 ```sh
 $ python main.py demo --video (path to video) --pose_input_dir (path to folder containing openpose skeletons) --output_dir (path to save the result video)
 ```
 
 
-> Structure
+### Structure
 ```sh
 .
 ├── config 
@@ -71,6 +80,7 @@ $ python main.py demo --video (path to video) --pose_input_dir (path to folder c
 │   ├── data.py               (To modify data into required formats)
 │   ├── labels.sh
 │   └── resize.sh
+│   └── per_video_trim.py     (trims videos class wise from the given dataset, after resizing is performed)
 ├── feeder
 │   ├── feeder_kinetics.py    (Class to load data into test, train etc. Problems might arise with torchloader due to memory)
 │   ├── feeder.py             
