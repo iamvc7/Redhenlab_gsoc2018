@@ -1,0 +1,22 @@
+# command line: main.py demo --video /home/paperspace/Final_data/trump.mp4
+
+config: ./config/st_gcn/kinetics-skeleton/demo.yaml
+device:
+- 0
+height: 1080
+ignore_weights: []
+model: net.st_gcn.Model
+model_args:
+    edge_importance_weighting: true
+    graph_args:
+        layout: openpose
+        strategy: spatial
+    in_channels: 3
+    num_class: 400
+output_dir: ./final_output/
+print_log: false
+save_log: true
+use_gpu: true
+video: /home/paperspace/Final_data/trump.mp4
+weights: ./models/kinetics-st_gcn.pt
+work_dir: ./work_dir/tmp

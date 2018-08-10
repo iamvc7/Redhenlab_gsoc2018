@@ -1,0 +1,26 @@
+
+moving mouth
+torso front
+torso back
+moving both hands
+hands on face
+moving hands one after other
+high left hand
+medium left hand
+low left hand
+high right hand
+medium right hand
+low right hand
+high left leg
+medium left leg
+low left leg
+high right leg
+medium right leg
+low right leg
+high roll both hands
+low roll both hands
+high roll both legs
+low roll both legs
+head front
+head back
+shaking head
