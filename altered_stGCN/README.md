@@ -1,10 +1,11 @@
 ### Installation
-* cd torchlight; python setup.py install; cd ..
-* pip install moviepy
-* sudo apt-get install ffmpeg
-* openpose
 * pytorch
-* Other dependencies, pip install -r requirements.txt
+* openpose
+* ```sh 
+  cd torchlight; python setup.py install; cd .. ```
+* ```sh pip install moviepy```
+* ```sh sudo apt-get install ffmpeg```
+* Other dependencies, ```sh pip install -r requirements.txt```
 
 
 ### Data Preperation
