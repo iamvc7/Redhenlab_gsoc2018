@@ -1,19 +1,10 @@
 ### Installation
 * pytorch
 * openpose
-* ```sh 
-  cd torchlight; python setup.py install; cd .. 
-```
-* ```sh 
-pip install moviepy
-```
-* ```sh 
-sudo apt-get install ffmpeg
-```
-* Other dependencies, ```sh 
-pip install -r requirements.txt
-```
-
+* cd torchlight; python setup.py install; cd .. 
+* pip install moviepy
+* sudo apt-get install ffmpeg
+* Other dependencies, pip install -r requirements.txt
 
 ### Data Preperation
 #### Place the [dataset](https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/human-activity-recognition/mpii-cooking-activities-dataset/) and labels inside folder named, *Cooking_Activity*
