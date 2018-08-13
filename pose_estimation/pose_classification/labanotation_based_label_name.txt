@@ -1,5 +1,0 @@
-{ "1": "moving mouth", "2" : "torso front", "3" : "torso back", "4" : "moving both hands", "5" : "hands on face", "6" : "moving hands one after other",
-"7" : "high left hand", "8" : "medium left hand", "9" : "low left hand", "10" : "high right hand", "11" : "medium right hand",
-"12" : "low right hand", "13" : "high left leg", "14" : "medium left leg", "15" : "low left leg", "16" : "high right leg", "17" : "medium right leg",
-"18" : "low right leg", "19" : "high roll both hands", "20" :"low roll both hands", "21" : "high roll both legs", "22" :"low roll both legs", "23" :"head front",
-"24" : "head back", "25" : "shaking head"}
