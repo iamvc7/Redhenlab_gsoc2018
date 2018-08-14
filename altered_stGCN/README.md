@@ -1,9 +1,11 @@
+## Altered_stGCN
+
 ### Installation
-* pytorch
-* openpose
+* [pytorch](https://pytorch.org/docs/stable/index.html)
+* [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
 * cd torchlight; python setup.py install; cd .. 
-* pip install moviepy
-* sudo apt-get install ffmpeg
+* pip install moviepy (For trimming videos)
+* sudo apt-get install ffmpeg (For resizing and visualization)
 * Other dependencies, pip install -r requirements.txt
 
 ### Data Preperation
