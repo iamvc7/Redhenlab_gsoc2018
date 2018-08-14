@@ -19,12 +19,12 @@ class Demo(IO):
         #print(video_name)
         output_result_dir = self.arg.output_dir
         output_result_path = f'{output_result_dir}/{video_name}.mp4'
-        label_name_path = './resource/kinetics_skeleton/n_label.txt'
+        label_name_path = './resource/kinetics_skeleton/Cooking_Activity.txt'
         with open(label_name_path) as f:
             label_name = f.readlines()
             label_name = [line.rstrip() for line in label_name]
 
-        output_snippets_dir = '/home/paperspace/st-gcn/openpose_output/'
+        output_snippets_dir = self.arg.pose_input_dir
         video = utils.video.get_video_frames(self.arg.video)
         height, width, _ = video[0].shape
         video_info = utils.openpose.json_pack(
@@ -43,10 +43,10 @@ class Demo(IO):
         intensity = (feature*feature).sum(dim=0)**0.5
         intensity = intensity.cpu().detach().numpy()
         label = output.sum(dim=3).sum(dim=2).sum(dim=1).argmax(dim=0)
-        label = label/10
 
         label_sequence = output.sum(dim=2).argmax(dim=0)
-        label_name_sequence = [[label_name[p/10] for p in l ]for l in label_sequence]
+        label_name_sequence = [[label_name[p] for p in l ]for l in label_sequence]
+        print (label_sequence)
         edge = self.model.graph.edge
         images = utils.visualization.stgcn_visualize(
             pose, edge, intensity, video,label_name[label] , label_name_sequence, self.arg.height)
@@ -58,7 +58,7 @@ class Demo(IO):
         for img in images:
             writer.writeFrame(img)
         writer.close()
-        print(f'The Demo result has been saved in {output_result_path}.')
+        print(f'The Result has been saved in {output_result_path}.')
 
     @staticmethod
     def get_parser(add_help=False):
@@ -66,17 +66,20 @@ class Demo(IO):
         parser = argparse.ArgumentParser(
             add_help=add_help,
             parents=[parent_parser],
-            description='Demo for Spatial Temporal Graph Convolution Network')
+            description='Result for Spatial Temporal Graph Convolution Network')
         parser.add_argument('--video',
             default='./resource/media/skateboarding.mp4',
             help='Path to video')
         parser.add_argument('--output_dir',
-            default='./final_output/',
+            default='./result_videos/',
             help='Path to save results')
         parser.add_argument('--height',
             default=1080,
             type=int,
             help='Path to save results')
+        parser.add_argument('--pose_input_dir',
+            default=None,
+            help='Path to pose files of the video')
         parser.set_defaults(config='./config/st_gcn/kinetics-skeleton/demo.yaml')
         parser.set_defaults(print_log=False)
 
