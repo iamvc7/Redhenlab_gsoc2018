@@ -5,11 +5,13 @@ Vinay Ch (vchandra@tcd.ie)
 ```
 
 ### Organization :
+[Red Hen Lab](http://www.redhenlan.org/)
+Cognitive Vision Lab, University of Bremen.
 
-[Red Hen Lab](http://www.redhenlab.org/)
-Cognitive Vision lab, University of Bremen
-Mentors - Dr. Mehul Bhatt, Jakob Suchan, Sri Krishna
-
+### Mentors
+[Dr. Mehul Bhatt](http://www.mehulbhatt.org/)
+Jakob Suchan
+Sri Krishna
 
 ### Altered_stGCN : 
 * [README](https://github.com/Zzoey/Redhenlab_gsoc2018/blob/master/altered_stGCN/README.md)
