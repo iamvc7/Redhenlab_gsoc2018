@@ -5,8 +5,7 @@ Vinay Ch (vchandra@tcd.ie)
 ```
 
 ### Organization :
-[Red Hen Lab](http://www.redhenlan.org/)
-Cognitive Vision Lab, University of Bremen.
+[Red Hen Lab](http://www.redhenlan.org/) - Cognitive Vision Lab, University of Bremen.
 
 ### Mentors
 [Dr. Mehul Bhatt](http://www.mehulbhatt.org/),
