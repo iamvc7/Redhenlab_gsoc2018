@@ -9,8 +9,8 @@ Vinay Ch (vchandra@tcd.ie)
 Cognitive Vision Lab, University of Bremen.
 
 ### Mentors
-[Dr. Mehul Bhatt](http://www.mehulbhatt.org/)
-Jakob Suchan
+[Dr. Mehul Bhatt](http://www.mehulbhatt.org/),
+Jakob Suchan and 
 Sri Krishna
 
 ### Altered_stGCN : 
