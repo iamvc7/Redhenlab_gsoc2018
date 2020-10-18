@@ -1,7 +1,7 @@
 ## GSOC 2018 Project
 
 ```sh
-Vinay Ch (vchandra@tcd.ie)
+Vinay Ch 
 ```
 
 ### Organization :
